@@ -1,0 +1,26 @@
+{
+  "name": "boilerplate-casperjs-with-grunt",
+  "version": "0.0.0",
+  "author": "Matt Kohnen <me@mattkohnen.com>",
+  "description": "Boilerplate for CasperJS with Grunt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MattKohnen/boilerplate-casperjs-with-grunt.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "casperjs",
+    "grunt"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "load-grunt-tasks": "~0.4.0",
+    "time-grunt": "~0.3.1",
+    "grunt-casper": "^0.3.7"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
