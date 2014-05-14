@@ -1,27 +1,14 @@
 /* global casper */
 'use strict';
 
-casper.start('http://google.fr/');
-
-casper.then(function() {
-    this.echo('Search Google');
+casper.test.begin('a twitter bootstrap dropdown can be opened', 2, function(test) {
+    casper.start('http://getbootstrap.com/2.3.2/javascript.html#dropdowns', function() {
+        test.assertExists('#navbar-example');
+        this.click('#dropdowns .nav-pills .dropdown:last-of-type a.dropdown-toggle');
+        this.waitUntilVisible('#dropdowns .nav-pills .open', function() {
+            test.pass('Dropdown is open');
+        });
+    }).run(function() {
+        test.done();
+    });
 });
-
-casper.thenEvaluate(function(term) {
-    document.querySelector('input[name="q"]').setAttribute('value', term);
-    document.querySelector('form[name="f"]').submit();
-}, 'CasperJS');
-
-casper.then(function() {
-    console.log('Click 1st result');
-
-    // Click on 1st result link
-    this.click('h3.r a');
-});
-
-casper.then(function() {
-    console.log('Clicked ok');
-    console.log('New location is ' + this.getCurrentUrl());
-});
-
-casper.run();
