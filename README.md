@@ -1,13 +1,8 @@
 # Boilerplate | CasperJS with Grunt
 
 ## Set Up
-```
-```
-npm install
-```
-```
-grunt test
-```
+1. `npm install`
+2. `grunt test`
 or
 ```
 grunt casper
