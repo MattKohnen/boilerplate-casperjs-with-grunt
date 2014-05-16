@@ -3,7 +3,6 @@
 
 casper.test.begin('A Twitter Bootstrap dropdown can be opened', 3, function(test) {
     casper.start('http://getbootstrap.com/2.3.2/javascript.html#dropdowns', function() {
-
         casper.echo('\n1. Verify HTTP connection:');
         test.assertHttpStatus(200);
 
